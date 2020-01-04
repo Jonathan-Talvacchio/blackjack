@@ -1,0 +1,626 @@
+{
+    "0":{
+        "suit": "Clubs",
+        "name": "Ace",
+        "value": 1,
+        "color": "Black",
+        "active": false,
+        "face-up": false,
+        "sprites":{
+            "front": "CA",
+            "back": "B1"
+        }
+    },
+    "1":{
+        "suit": "Clubs",
+        "name": "Two",
+        "value": 2,
+        "color": "Black",
+        "active": false,
+        "face-up": false,
+        "sprites":{
+            "front": "C2",
+            "back": "B1"
+        }
+    },
+    "2":{
+        "suit": "Clubs",
+        "name": "Three",
+        "value": 3,
+        "color": "Black",
+        "active": false,
+        "face-up": false,
+        "sprites":{
+            "front": "C3",
+            "back": "B1"
+        }
+    },
+    "3":{
+        "suit": "Clubs",
+        "name": "Four",
+        "value": 4,
+        "color": "Black",
+        "active": false,
+        "face-up": false,
+        "sprites":{
+            "front": "C4",
+            "back": "B1"
+        }
+    },
+    "4":{
+        "suit": "Clubs",
+        "name": "Five",
+        "value": 5,
+        "color": "Black",
+        "active": false,
+        "face-up": false,
+        "sprites":{
+            "front": "C5",
+            "back": "B1"
+        }
+    },
+    "5":{
+        "suit": "Clubs",
+        "name": "Six",
+        "value": 6,
+        "color": "Black",
+        "active": false,
+        "face-up": false,
+        "sprites":{
+            "front": "C6",
+            "back": "B1"
+        }
+    },
+    "6":{
+        "suit": "Clubs",
+        "name": "Seven",
+        "value": 7,
+        "color": "Black",
+        "active": false,
+        "face-up": false,
+        "sprites":{
+            "front": "C7",
+            "back": "B1"
+        }
+    },
+    "7":{
+        "suit": "Clubs",
+        "name": "Eight",
+        "value": 8,
+        "color": "Black",
+        "active": false,
+        "face-up": false,
+        "sprites":{
+            "front": "C8",
+            "back": "B1"
+        }
+    },
+    "8":{
+        "suit": "Clubs",
+        "name": "Nine",
+        "value": 9,
+        "color": "Black",
+        "active": false,
+        "face-up": false,
+        "sprites":{
+            "front": "C9",
+            "back": "B1"
+        }
+    },
+    "9":{
+        "suit": "Clubs",
+        "name": "Ten",
+        "value": 10,
+        "color": "Black",
+        "active": false,
+        "face-up": false,
+        "sprites":{
+            "front": "C10",
+            "back": "B1"
+        }
+    },
+    "10":{
+        "suit": "Clubs",
+        "name": "Jack",
+        "value": 10,
+        "color": "Black",
+        "active": false,
+        "face-up": false,
+        "sprites":{
+            "front": "CJ",
+            "back": "B1"
+        }
+    },
+    "11":{
+        "suit": "Clubs",
+        "name": "Queen",
+        "value": 10,
+        "color": "Black",
+        "active": false,
+        "face-up": false,
+        "sprites":{
+            "front": "CQ",
+            "back": "B1"
+        }
+    },
+    "12":{
+        "suit": "Clubs",
+        "name": "King",
+        "value": 10,
+        "color": "Black",
+        "active": false,
+        "face-up": false,
+        "sprites":{
+            "front": "CK",
+            "back": "B1"
+        }
+    },
+    "13":{
+        "suit": "Diamonds",
+        "name": "Ace",
+        "value": 1,
+        "color": "Red",
+        "active": false,
+        "face-up": false,
+        "sprites":{
+            "front": "DA",
+            "back": "B1"
+        }
+    },
+    "14":{
+        "suit": "Diamonds",
+        "name": "Two",
+        "value": 2,
+        "color": "Red",
+        "active": false,
+        "face-up": false,
+        "sprites":{
+            "front": "D2",
+            "back": "B1"
+        }
+    },
+    "15":{
+        "suit": "Diamonds",
+        "name": "Three",
+        "value": 3,
+        "color": "Red",
+        "active": false,
+        "face-up": false,
+        "sprites":{
+            "front": "D3",
+            "back": "B1"
+        }
+    },
+    "16":{
+        "suit": "Diamonds",
+        "name": "Four",
+        "value": 4,
+        "color": "Red",
+        "active": false,
+        "face-up": false,
+        "sprites":{
+            "front": "D4",
+            "back": "B1"
+        }
+    },
+    "17":{
+        "suit": "Diamonds",
+        "name": "Five",
+        "value": 5,
+        "color": "Red",
+        "active": false,
+        "face-up": false,
+        "sprites":{
+            "front": "D5",
+            "back": "B1"
+        }
+    },
+    "18":{
+        "suit": "Diamonds",
+        "name": "Six",
+        "value": 6,
+        "color": "Red",
+        "active": false,
+        "face-up": false,
+        "sprites":{
+            "front": "D6",
+            "back": "B1"
+        }
+    },
+    "19":{
+        "suit": "Diamonds",
+        "name": "Seven",
+        "value": 7,
+        "color": "Red",
+        "active": false,
+        "face-up": false,
+        "sprites":{
+            "front": "D7",
+            "back": "B1"
+        }
+    },
+    "20":{
+        "suit": "Diamonds",
+        "name": "Eight",
+        "value": 8,
+        "color": "Red",
+        "active": false,
+        "face-up": false,
+        "sprites":{
+            "front": "D8",
+            "back": "B1"
+        }
+    },
+    "21":{
+        "suit": "Diamonds",
+        "name": "Nine",
+        "value": 9,
+        "color": "Red",
+        "active": false,
+        "face-up": false,
+        "sprites":{
+            "front": "D9",
+            "back": "B1"
+        }
+    },
+    "22":{
+        "suit": "Diamonds",
+        "name": "Ten",
+        "value": 10,
+        "color": "Red",
+        "active": false,
+        "face-up": false,
+        "sprites":{
+            "front": "D10",
+            "back": "B1"
+        }
+    },
+    "23":{
+        "suit": "Diamonds",
+        "name": "Jack",
+        "value": 10,
+        "color": "Red",
+        "active": false,
+        "face-up": false,
+        "sprites":{
+            "front": "DJ",
+            "back": "B1"
+        }
+    },
+    "24":{
+        "suit": "Diamonds",
+        "name": "Queen",
+        "value": 10,
+        "color": "Red",
+        "active": false,
+        "face-up": false,
+        "sprites":{
+            "front": "DQ",
+            "back": "B1"
+        }
+    },
+    "25":{
+        "suit": "Diamonds",
+        "name": "King",
+        "value": 10,
+        "color": "Red",
+        "active": false,
+        "face-up": false,
+        "sprites":{
+            "front": "DK",
+            "back": "B1"
+        }
+    },
+    "26":{
+        "suit": "Hearts",
+        "name": "Ace",
+        "value": 1,
+        "color": "Red",
+        "active": false,
+        "face-up": false,
+        "sprites":{
+            "front": "HA",
+            "back": "B1"
+        }
+    },
+    "27":{
+        "suit": "Hearts",
+        "name": "Two",
+        "value": 2,
+        "color": "Red",
+        "active": false,
+        "face-up": false,
+        "sprites":{
+            "front": "H2",
+            "back": "B1"
+        }
+    },
+    "28":{
+        "suit": "Hearts",
+        "name": "Three",
+        "value": 3,
+        "color": "Red",
+        "active": false,
+        "face-up": false,
+        "sprites":{
+            "front": "H3",
+            "back": "B1"
+        }
+    },
+    "29":{
+        "suit": "Hearts",
+        "name": "Four",
+        "value": 4,
+        "color": "Red",
+        "active": false,
+        "face-up": false,
+        "sprites":{
+            "front": "H4",
+            "back": "B1"
+        }
+    },
+    "30":{
+        "suit": "Hearts",
+        "name": "Five",
+        "value": 5,
+        "color": "Red",
+        "active": false,
+        "face-up": false,
+        "sprites":{
+            "front": "H5",
+            "back": "B1"
+        }
+    },
+    "31":{
+        "suit": "Hearts",
+        "name": "Six",
+        "value": 6,
+        "color": "Red",
+        "active": false,
+        "face-up": false,
+        "sprites":{
+            "front": "H6",
+            "back": "B1"
+        }
+    },
+    "32":{
+        "suit": "Hearts",
+        "name": "Seven",
+        "value": 7,
+        "color": "Red",
+        "active": false,
+        "face-up": false,
+        "sprites":{
+            "front": "H7",
+            "back": "B1"
+        }
+    },
+    "33":{
+        "suit": "Hearts",
+        "name": "Eight",
+        "value": 8,
+        "color": "Red",
+        "active": false,
+        "face-up": false,
+        "sprites":{
+            "front": "H8",
+            "back": "B1"
+        }
+    },
+    "34":{
+        "suit": "Hearts",
+        "name": "Nine",
+        "value": 9,
+        "color": "Red",
+        "active": false,
+        "face-up": false,
+        "sprites":{
+            "front": "H9",
+            "back": "B1"
+        }
+    },
+    "35":{
+        "suit": "Hearts",
+        "name": "Ten",
+        "value": 10,
+        "color": "Red",
+        "active": false,
+        "face-up": false,
+        "sprites":{
+            "front": "H10",
+            "back": "B1"
+        }
+    },
+    "36":{
+        "suit": "Hearts",
+        "name": "Jack",
+        "value": 10,
+        "color": "Red",
+        "active": false,
+        "face-up": false,
+        "sprites":{
+            "front": "HJ",
+            "back": "B1"
+        }
+    },
+    "37":{
+        "suit": "Hearts",
+        "name": "Queen",
+        "value": 10,
+        "color": "Red",
+        "active": false,
+        "face-up": false,
+        "sprites":{
+            "front": "HQ",
+            "back": "B1"
+        }
+    },
+    "38":{
+        "suit": "Hearts",
+        "name": "King",
+        "value": 10,
+        "color": "Red",
+        "active": false,
+        "face-up": false,
+        "sprites":{
+            "front": "HK",
+            "back": "B1"
+        }
+    },       
+    "39":{
+        "suit": "Spades",
+        "name": "Ace",
+        "value": 1,
+        "color": "Black",
+        "active": false,
+        "face-up": false,
+        "sprites":{
+            "front": "SA",
+            "back": "B1"
+        }
+    },
+    "40":{
+        "suit": "Spades",
+        "name": "Two",
+        "value": 2,
+        "color": "Black",
+        "active": false,
+        "face-up": false,
+        "sprites":{
+            "front": "S2",
+            "back": "B1"
+        }
+    },
+    "41":{
+        "suit": "Spades",
+        "name": "Three",
+        "value": 3,
+        "color": "Black",
+        "active": false,
+        "face-up": false,
+        "sprites":{
+            "front": "S3",
+            "back": "B1"
+        }
+    },
+    "42":{
+        "suit": "Spades",
+        "name": "Four",
+        "value": 4,
+        "color": "Black",
+        "active": false,
+        "face-up": false,
+        "sprites":{
+            "front": "S4",
+            "back": "B1"
+        }
+    },
+    "43":{
+        "suit": "Spades",
+        "name": "Five",
+        "value": 5,
+        "color": "Black",
+        "active": false,
+        "face-up": false,
+        "sprites":{
+            "front": "S5",
+            "back": "B1"
+        }
+    },
+    "44":{
+        "suit": "Spades",
+        "name": "Six",
+        "value": 6,
+        "color": "Black",
+        "active": false,
+        "face-up": false,
+        "sprites":{
+            "front": "S6",
+            "back": "B1"
+        }
+    },
+    "45":{
+        "suit": "Spades",
+        "name": "Seven",
+        "value": 7,
+        "color": "Black",
+        "active": false,
+        "face-up": false,
+        "sprites":{
+            "front": "S7",
+            "back": "B1"
+        }
+    },
+    "46":{
+        "suit": "Spades",
+        "name": "Eight",
+        "value": 8,
+        "color": "Black",
+        "active": false,
+        "face-up": false,
+        "sprites":{
+            "front": "S8",
+            "back": "B1"
+        }
+    },
+    "47":{
+        "suit": "Spades",
+        "name": "Nine",
+        "value": 9,
+        "color": "Black",
+        "active": false,
+        "face-up": false,
+        "sprites":{
+            "front": "S9",
+            "back": "B1"
+        }
+    },
+    "48":{
+        "suit": "Spades",
+        "name": "Ten",
+        "value": 10,
+        "color": "Black",
+        "active": false,
+        "face-up": false,
+        "sprites":{
+            "front": "S10",
+            "back": "B1"
+        }
+    },
+    "49":{
+        "suit": "Spades",
+        "name": "Jack",
+        "value": 10,
+        "color": "Black",
+        "active": false,
+        "face-up": false,
+        "sprites":{
+            "front": "SJ",
+            "back": "B1"
+        }
+    },
+    "50":{
+        "suit": "Spades",
+        "name": "Queen",
+        "value": 10,
+        "color": "Black",
+        "active": false,
+        "face-up": false,
+        "sprites":{
+            "front": "SQ",
+            "back": "B1"
+        }
+    },
+    "51":{
+        "suit": "Spades",
+        "name": "King",
+        "value": 10,
+        "color": "Black",
+        "active": false,
+        "face-up": false,
+        "sprites":{
+            "front": "SK",
+            "back": "B1"
+        }
+    }            
+}
