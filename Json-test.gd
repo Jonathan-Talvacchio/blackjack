@@ -12,9 +12,16 @@ var selected_card
 
 var card_index = 0
 
+var hand_children_index = 0
+var hand_children = []
 
 func _ready() -> void:
 	_load()
+	hand_children = $Hand.get_children()
+#	for i in $Hand.get_children():
+#		hand_children.append(i)
+#		i.visible = false
+#		print(i.name)
 
 
 func _input(event: InputEvent) -> void:
@@ -25,6 +32,10 @@ func _input(event: InputEvent) -> void:
 			_cycle_card()
 		if event.pressed and event.scancode == KEY_B:
 			$Card/Sprite.texture = load(back_path + selected_card["sprites"]["back"] + ".png")
+		if event.pressed and event.scancode == KEY_C:
+			if hand_children_index < hand_children.size():
+				hand_children[hand_children_index].visible = true
+				hand_children_index += 1
 
 
 func _load():
@@ -52,6 +63,7 @@ func _random_card():
 	selected_card = full_deck[randi() % full_deck.size()]
 	$Card/Sprite.texture = load(sprite_path + selected_card["sprites"]["front"] + ".png")
 	$Card2/Sprite.texture = load(sprite_path + selected_card["sprites"]["front"] + ".png")
+	$Hand/Card/Sprite.texture = load(sprite_path + selected_card["sprites"]["front"] + ".png")
 	
 	var new_text = "%s of %s" % [selected_card["name"], selected_card["suit"]]
 	
@@ -66,3 +78,4 @@ func _cycle_card():
 	
 	$Card/Sprite.texture = load(sprite_path + selected_card["sprites"]["front"] + ".png")
 	$Card2/Sprite.texture = load(sprite_path + selected_card["sprites"]["front"] + ".png")
+	$Hand/Card/Sprite.texture = load(sprite_path + selected_card["sprites"]["front"] + ".png")
