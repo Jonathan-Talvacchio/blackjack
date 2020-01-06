@@ -27,7 +27,8 @@ func _load():
 	var deck = json_data.values()
 	for card in deck:
 		full_deck.append(card)
-	inactive_deck = full_deck
+		inactive_deck.append(card)
+#	inactive_deck = full_deck
 	file.close()
 
 
@@ -44,6 +45,9 @@ func _random_card():
 		print("No inactive card.")
 
 
+# Reset both inactave and active deck 
 func _reset_deck():
-	inactive_deck = full_deck
+	inactive_deck = []
+	for card in full_deck:
+		inactive_deck.append(card)
 	active_deck = []

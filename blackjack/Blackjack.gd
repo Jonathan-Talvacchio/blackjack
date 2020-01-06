@@ -13,12 +13,19 @@ func _ready() -> void:
 
 func _input(event: InputEvent) -> void:
 	if event.pressed and event.scancode == KEY_ENTER:
-		var selected_card = CardData._random_card()
-		if selected_card != null:
-			var text = "%s of %s" % [selected_card["name"],selected_card["suit"]]
-			print(text)
+		_reset_game()
 
 
 func _new_game():
 	emit_signal("new_game")
+
+
+func _end_game():
+	emit_signal("end_game")
+	pass
+
+
+func _reset_game():
+	CardData._reset_deck()
+	_new_game()
 	pass

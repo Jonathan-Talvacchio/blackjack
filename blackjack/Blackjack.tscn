@@ -12,5 +12,5 @@ starting_flipped = 1
 
 [node name="PlayerHand" parent="." instance=ExtResource( 2 )]
 position = Vector2( 350, 427.5 )
-[connection signal="new_game" from="." to="PlayerHand" method="_on_Blackjack_new_game"]
 [connection signal="new_game" from="." to="ComputerHand" method="_on_Blackjack_new_game"]
+[connection signal="new_game" from="." to="PlayerHand" method="_on_Blackjack_new_game"]
