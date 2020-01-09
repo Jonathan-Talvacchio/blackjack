@@ -14,13 +14,11 @@ export var card_display_delay:float = 0.25
 export var new_game_delay:float = 2
 
 var active_player:int
-
+var computer_wins:int = 0
+var player_wins:int = 0
 
 func _ready() -> void:
 	_new_game()
-	# \/\/\/TEMP\/\/\/
-	$Buttons/MarginContainer/VBoxContainer/HitButton.grab_focus()
-	$Buttons2/MarginContainer/HBoxContainer/HitButton.grab_focus()
 
 
 # -----TEMP-----
@@ -35,8 +33,8 @@ func _input(event: InputEvent) -> void:
 
 
 func _process(delta: float) -> void:
-	$Label.text = "value: %s" % $ComputerHand.shown_value
-	$Label2.text = "value: %s" % $PlayerHand.shown_value
+	$VBoxContainer/Label.text = "Value: %s" % $ComputerHand.shown_value
+	$VBoxContainer2/Label.text = "Value: %s" % $PlayerHand.shown_value
 
 
 """
@@ -100,12 +98,14 @@ func _win_check():
 		
 		$PlayerHand._set_event(Turn_Event.LOSE)
 		$ComputerHand._set_event(Turn_Event.WIN)
+		_set_win_text()
 		return # computer win
 	if _bust_check($ComputerHand):
 		$Label3.text = "Player Wins! Computer Busts with %s!" % computer_value
 
 		$PlayerHand._set_event(Turn_Event.WIN)
 		$ComputerHand._set_event(Turn_Event.LOSE)
+		_set_win_text()
 		return # player win
 	
 	if computer_value > player_value:
@@ -113,6 +113,7 @@ func _win_check():
 
 		$PlayerHand._set_event(Turn_Event.LOSE)
 		$ComputerHand._set_event(Turn_Event.WIN)
+		_set_win_text()
 		return # computer win
 	elif computer_value == player_value:
 		$Label3.text = "Tie Both at %s" % player_value
@@ -125,8 +126,17 @@ func _win_check():
 
 	$PlayerHand._set_event(Turn_Event.WIN)
 	$ComputerHand._set_event(Turn_Event.LOSE)
+	_set_win_text()
 	# player win
-	
+
+
+func _set_win_text():
+	if $PlayerHand._get_event() == Turn_Event.WIN:
+		player_wins += 1
+		$VBoxContainer2/Label2.text = "Wins: %s" % player_wins
+	elif $ComputerHand._get_event() == Turn_Event.WIN:
+		computer_wins += 1
+		$VBoxContainer/Label2.text = "Wins: %s" % computer_wins
 
 
 func _set_active_player(player: int):
@@ -143,6 +153,7 @@ func _new_game():
 	$ComputerHand._set_event(Turn_Event.NONE)
 	$PlayerHand._set_event(Turn_Event.NONE)
 	CardData._reset_deck()
+	$Buttons/MarginContainer/HBoxContainer/HitButton.grab_focus()
 	emit_signal("new_game")
 
 
@@ -167,12 +178,13 @@ func _on_HitButton_button_down() -> void:
 			_hit(Players.PLAYER)
 			_bust_check($PlayerHand)
 	
-	if _bust_check($PlayerHand):
-		_win_check()
-		# ---TEMP---
-		_game_timer_set(new_game_delay)
-		yield($GameTimer, "timeout")
-		_new_game()
+		if _bust_check($PlayerHand):
+			_set_active_player(Players.COMPUTER)
+			_win_check()
+			# ---TEMP---
+			_game_timer_set(new_game_delay)
+			yield($GameTimer, "timeout")
+			_new_game()
 
 
 func _on_StandButton_button_down() -> void:
