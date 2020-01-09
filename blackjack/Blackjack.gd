@@ -20,6 +20,7 @@ func _ready() -> void:
 	_new_game()
 	# \/\/\/TEMP\/\/\/
 	$Buttons/MarginContainer/VBoxContainer/HitButton.grab_focus()
+	$Buttons2/MarginContainer/HBoxContainer/HitButton.grab_focus()
 
 
 # -----TEMP-----
