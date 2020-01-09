@@ -1,10 +1,18 @@
 extends Node2D
 
-export var face_up: bool = false
+export var face_up:bool = false
+export var value:int
+
+var card_name:String
+var suit:String
+var color:String
+var face_sprite:String
+#var back_sprite:String
+
+var selected_card = {}
 
 var face_sprite_path = "res://card/sprites/front/"
 var sprite_path = preload("res://card/sprites/back/B1.png")
-var selected_card = {}
 
 
 # Called when the node enters the scene tree for the first time.
@@ -12,18 +20,23 @@ func _ready() -> void:
 	pass # Replace with function body.
 
 
-func _process(delta: float) -> void:
-	pass
-
-
+"""""
+Set selected_card data
+"""""
 func _set_card(card):
 	selected_card = card
+	card_name = card["name"]
+	value = card["value"]
+	face_sprite = card["sprites"]["front"] + ".png"
+	_set_face_up(face_up)
+
+
+"""""
+Set card's face_up, then changes the card's sprite
+"""""
+func _set_face_up(is_face_up: bool):
+	face_up = is_face_up
 	if not face_up:
 		$Sprite.texture = sprite_path
 	else:
-		$Sprite.texture = load(face_sprite_path + selected_card["sprites"]["front"] + ".png")
-
-
-func _set_face_up(is_face_up: bool):
-	face_up = is_face_up
-	_set_card(selected_card)
+		$Sprite.texture = load(face_sprite_path + face_sprite)

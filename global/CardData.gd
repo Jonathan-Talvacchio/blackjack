@@ -10,9 +10,11 @@ var active_deck = []
 
 func _ready() -> void:
 	_load()
-	pass
 
 
+"""""
+Load cards from json file
+"""""
 func _load():
 	var file = File.new()
 
@@ -28,11 +30,12 @@ func _load():
 	for card in deck:
 		full_deck.append(card)
 		inactive_deck.append(card)
-#	inactive_deck = full_deck
 	file.close()
 
 
-# Pull a random card from the inactave deck
+"""""
+Pull a random card from the inactave deck
+"""""
 func _random_card():
 	if not inactive_deck.empty():
 		randomize()
@@ -42,10 +45,12 @@ func _random_card():
 		inactive_deck.remove(index)
 		return selected_card
 	else:
-		print("No inactive card.")
+		print("No inactive card found.")
 
 
-# Reset both inactave and active deck 
+"""""
+Reset both inactave and active deck
+"""""
 func _reset_deck():
 	inactive_deck = []
 	for card in full_deck:

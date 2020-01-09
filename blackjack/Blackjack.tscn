@@ -1,16 +1,90 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://blackjack/Blackjack.gd" type="Script" id=1]
 [ext_resource path="res://hand/Hand.tscn" type="PackedScene" id=2]
+[ext_resource path="res://ui/Button.tscn" type="PackedScene" id=3]
 
 [node name="Blackjack" type="Node2D"]
 script = ExtResource( 1 )
+new_game_delay = 2.5
 
 [node name="ComputerHand" parent="." instance=ExtResource( 2 )]
-position = Vector2( 350, 190 )
+position = Vector2( 280, 190 )
 starting_flipped = 1
 
 [node name="PlayerHand" parent="." instance=ExtResource( 2 )]
-position = Vector2( 350, 427.5 )
+position = Vector2( 280, 427.5 )
+
+[node name="GameTimer" type="Timer" parent="."]
+wait_time = 0.25
+
+[node name="Label" type="Label" parent="."]
+margin_left = 70.0
+margin_top = 95.0
+margin_right = 210.0
+margin_bottom = 285.0
+text = "Value:"
+align = 1
+valign = 1
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 70.0
+margin_top = 333.0
+margin_right = 210.0
+margin_bottom = 523.0
+text = "Value:"
+align = 1
+valign = 1
+
+[node name="Label3" type="Label" parent="."]
+margin_left = 210.0
+margin_right = 980.0
+margin_bottom = 95.0
+align = 1
+valign = 1
+
+[node name="Buttons" type="Control" parent="."]
+margin_top = 95.0
+margin_right = 118.0
+margin_bottom = 523.0
+
+[node name="MarginContainer" type="MarginContainer" parent="Buttons"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 20.0
+margin_top = 20.0
+margin_right = -20.0
+margin_bottom = -20.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Buttons/MarginContainer"]
+margin_right = 82.0
+margin_bottom = 388.0
+custom_constants/separation = 35
+
+[node name="HitButton" parent="Buttons/MarginContainer/VBoxContainer" instance=ExtResource( 3 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 82.0
+margin_bottom = 106.0
+text = "Hit"
+
+[node name="StandButton" parent="Buttons/MarginContainer/VBoxContainer" instance=ExtResource( 3 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 141.0
+margin_right = 82.0
+margin_bottom = 247.0
+text = "Stand"
+
+[node name="NewButton" parent="Buttons/MarginContainer/VBoxContainer" instance=ExtResource( 3 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 282.0
+margin_right = 82.0
+margin_bottom = 388.0
+text = "New Game"
 [connection signal="new_game" from="." to="ComputerHand" method="_on_Blackjack_new_game"]
 [connection signal="new_game" from="." to="PlayerHand" method="_on_Blackjack_new_game"]
+[connection signal="button_down" from="Buttons/MarginContainer/VBoxContainer/HitButton" to="." method="_on_HitButton_button_down"]
+[connection signal="button_down" from="Buttons/MarginContainer/VBoxContainer/StandButton" to="." method="_on_StandButton_button_down"]
+[connection signal="button_down" from="Buttons/MarginContainer/VBoxContainer/NewButton" to="." method="_on_NewButton_button_down"]
