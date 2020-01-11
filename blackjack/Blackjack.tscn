@@ -81,8 +81,7 @@ align = 1
 valign = 1
 
 [node name="Label3" type="Label" parent="."]
-margin_left = 210.0
-margin_right = 980.0
+margin_right = 1024.0
 margin_bottom = 95.0
 align = 1
 valign = 1
